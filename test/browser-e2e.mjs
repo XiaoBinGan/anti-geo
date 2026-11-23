@@ -31,6 +31,12 @@ if (!CHROME) {
   process.exit(0);
 }
 
+// Node < 22 没有全局 WebSocket（CDP 需要）。缺了就当环境不满足，跳过而不是失败。
+if (typeof WebSocket === 'undefined') {
+  console.log('跳过：当前 Node 没有全局 WebSocket（需要 Node 22+）。');
+  process.exit(0);
+}
+
 const PAGE_PORT = 8941;
 const DBG_PORT = 9341;
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
