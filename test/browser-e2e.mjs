@@ -637,8 +637,9 @@ async function main() {
     check('扫描耗时 < 5s（含 1s 启动延迟）', elapsed < 5000, `${elapsed}ms`);
   } finally {
     chrome.kill('SIGKILL');
+    await sleep(600); // 给 Chrome 一点时间释放 profile
     server.close();
-    fs.rmSync(prof, { recursive: true, force: true });
+    try { fs.rmSync(prof, { recursive: true, force: true, maxRetries: 8, retryDelay: 250 }); } catch {}
   }
 
   console.log(`\n${'─'.repeat(46)}\n通过 ${pass} / ${pass + fail}${fail ? '  ← 有失败' : '  全部通过'}`);

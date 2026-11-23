@@ -70,7 +70,7 @@ try {
   check('整体判红', scored.summary.level.key === 'red');
 } finally {
   srv.kill();
-  fs.rmSync(tmp, { force: true });
+  try { fs.rmSync(tmp, { force: true, maxRetries: 5, retryDelay: 200 }); } catch {}
 }
 
 console.log(`\n${'─'.repeat(46)}\n通过 ${pass} / ${pass + fail}${fail ? '  ← 有失败' : '  全部通过'}`);

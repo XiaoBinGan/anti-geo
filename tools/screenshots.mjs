@@ -246,7 +246,7 @@ async function main() {
   else console.log('✗ 设置页没渲染（file:// 可能被限制）');
 
   ch.kill('SIGKILL');
-  try { fs.rmSync(prof, { recursive: true, force: true }); } catch {}
+  try { try { fs.rmSync(prof, { recursive: true, force: true, maxRetries: 8, retryDelay: 250 }); } catch {} } catch {}
   srv.close();
   console.log(`\n截图保存在 ${path.relative(ROOT, OUT)}/`);
   setTimeout(() => process.exit(0), 200);
