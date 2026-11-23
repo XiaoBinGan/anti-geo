@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<title>反GEO · 设置</title>
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: #f9fafb; color: #1f2937;
+    font: 400 14px/1.65 -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 80px; }
+  header { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .logo { width: 32px; height: 32px; border-radius: 9px; background: linear-gradient(135deg,#6366f1,#8b5cf6);
+          color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; }
+  h1 { font-size: 19px; margin: 0; }
+  .lead { color: #6b7280; font-size: 13px; margin: 0 0 24px 42px; }
+
+  section { background: #fff; border: 1px solid #eceff3; border-radius: 12px; padding: 18px 20px; margin-bottom: 16px; }
+  section h2 { font-size: 14px; margin: 0 0 4px; display: flex; align-items: center; gap: 8px; }
+  section .desc { color: #9ca3af; font-size: 12.5px; margin: 0 0 14px; }
+
+  .row { display: flex; align-items: center; justify-content: space-between; padding: 9px 0; border-top: 1px solid #f4f5f7; gap: 14px; }
+  .row:first-of-type { border-top: 0; }
+  .row .lb { font-size: 13.5px; }
+  .row .lb small { display: block; color: #9ca3af; font-size: 11.5px; font-weight: 400; }
+
+  select, input[type="number"], input[type="text"], input[type="url"], textarea {
+    font: inherit; font-size: 13px; padding: 7px 10px; border: 1px solid #e5e7eb; border-radius: 8px;
+    background: #fff; color: #1f2937; outline: none;
+  }
+  select:focus, input:focus, textarea:focus { border-color: #a5b4fc; box-shadow: 0 0 0 3px rgba(99,102,241,.12); }
+  input[type="number"] { width: 80px; }
+  input[type="url"] { width: 100%; }
+  textarea { width: 100%; min-height: 110px; resize: vertical; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.7; }
+
+  .toggle { position: relative; width: 40px; height: 22px; flex: none; }
+  .toggle input { opacity: 0; width: 0; height: 0; }
+  .slider { position: absolute; inset: 0; background: #d1d5db; border-radius: 22px; cursor: pointer; transition: .2s; }
+  .slider::before { content: ""; position: absolute; width: 18px; height: 18px; left: 2px; top: 2px; background: #fff;
+                    border-radius: 50%; transition: .2s; }
+  input:checked + .slider { background: #4f46e5; }
+  input:checked + .slider::before { transform: translateX(18px); }
+
+  .saved { position: fixed; left: 50%; bottom: 26px; transform: translateX(-50%) translateY(20px);
+           background: #111827; color: #fff; padding: 9px 18px; border-radius: 999px; font-size: 12.5px;
+           opacity: 0; pointer-events: none; transition: .25s; z-index: 10; }
+  .saved.on { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+  .note { background: #f5f3ff; border: 1px solid #ddd6fe; color: #5b21b6; border-radius: 10px;
+          padding: 12px 14px; font-size: 12.5px; margin-bottom: 16px; line-height: 1.7; }
+  .note b { color: #4c1d95; }
+  .kbd { font-family: ui-monospace, monospace; background: #eef2ff; padding: 1px 5px; border-radius: 4px; font-size: 12px; }
+
+  .btnrow { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+  button {
+    font: inherit; font-size: 12.5px; padding: 8px 14px; border-radius: 8px;
+    border: 1px solid #e5e7eb; background: #fff; color: #374151; cursor: pointer;
+  }
+  button:hover { background: #f9fafb; }
+  button.primary { background: #4f46e5; border-color: #4f46e5; color: #fff; }
+  button.primary:hover { background: #4338ca; }
+  button.ghost { border-color: transparent; color: #6b7280; }
+  button:disabled { opacity: .5; cursor: default; }
+
+  .status { margin-top: 12px; padding: 10px 12px; border-radius: 8px; font-size: 12.5px; line-height: 1.7; }
+  .status.ok { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; }
+  .status.err { background: #fef2f2; border: 1px solid #fecaca; color: #991b1b; }
+  .status.idle { background: #f9fafb; border: 1px solid #f0f0f0; color: #6b7280; }
+  .status b { font-weight: 700; }
+
+  .cands { margin-top: 12px; display: flex; flex-direction: column; gap: 8px; }
+  .cand {
+    border: 1px solid #e5e7eb; border-radius: 10px; padding: 11px 13px; cursor: pointer;
+    transition: border-color .15s, background .15s;
+  }
+  .cand:hover { border-color: #a5b4fc; background: #fafaff; }
+  .cand.sel { border-color: #4f46e5; background: #f5f3ff; box-shadow: 0 0 0 3px rgba(99,102,241,.1); }
+  .cand .c-top { display: flex; align-items: center; gap: 8px; font-size: 12.5px; }
+  .cand .c-sel { font-family: ui-monospace, monospace; font-size: 11.5px; color: #4f46e5; word-break: break-all; flex: 1; }
+  .cand .c-meta { color: #9ca3af; font-size: 11.5px; white-space: nowrap; }
+  .cand .c-prev { color: #6b7280; font-size: 11.5px; margin-top: 5px; line-height: 1.5;
+                  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .cand .c-badge { font-size: 10.5px; padding: 1px 6px; border-radius: 4px; background: #eef2ff; color: #4338ca; }
+
+  .override-list { margin-top: 10px; font-size: 12.5px; }
+  .override-list .o {
+    display: flex; align-items: center; gap: 8px; padding: 7px 0; border-top: 1px solid #f4f5f7;
+  }
+  .override-list .o code { background: #f3f4f6; padding: 1px 6px; border-radius: 4px; font-size: 11.5px; flex: 1;
+                           word-break: break-all; }
+  .override-list .o button { padding: 3px 9px; font-size: 11.5px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo">反</div>
+    <h1>反GEO · 设置</h1>
+  </header>
+  <p class="lead">检测 AI 答案里的 GEO 投毒：站群互引、模板农场、隐藏指令注入、无一手来源。全部本地运行。</p>
+
+  <div class="note">
+    <b>它怎么判断？</b> 三条硬证据：① 页面里藏了给 AI 看的指令（白字 / noscript / 注释）；② 同一答案的多条引用正文几乎同模板（≥3 个站点，站群批量生成）；③ 域名命中可疑名单。其余是弱信号叠加，不单独定罪。
+  </div>
+
+  <!-- ─────────── 检测行为 ─────────── -->
+  <section>
+    <h2>检测行为</h2>
+    <p class="desc">影响出现频率和速度。默认值适合大多数人。</p>
+
+    <div class="row">
+      <span class="lb">启用检测<small>关闭后所有页面不再注入界面</small></span>
+      <div class="toggle"><input type="checkbox" id="enabled" /><span class="slider"></span></div>
+    </div>
+
+    <div class="row">
+      <span class="lb">显示级别<small>低于此级别的问题不打扰你</small></span>
+      <select id="displayLevel">
+        <option value="all">全部显示</option>
+        <option value="warn">只有可疑时才显示</option>
+        <option value="bad">只有硬证据才显示</option>
+      </select>
+    </div>
+
+    <div class="row">
+      <span class="lb">深度核查<small>抓取被引用页面，检测隐藏指令与模板相似度。关闭后只看域名，很快但漏得多</small></span>
+      <div class="toggle"><input type="checkbox" id="deepCheck" /><span class="slider"></span></div>
+    </div>
+
+    <div class="row">
+      <span class="lb">每次最多抓取页数<small>越多越准，越慢</small></span>
+      <input type="number" id="maxFetch" min="1" max="12" />
+    </div>
+
+    <div class="row">
+      <span class="lb">最少引用数<small>答案引用少于该数量时不检测</small></span>
+      <input type="number" id="minCitations" min="1" max="10" />
+    </div>
+  </section>
+
+  <!-- ─────────── 社区名单 ─────────── -->
+  <section>
+    <h2>社区名单订阅 <span class="c-badge" style="font-size:10.5px;padding:1px 6px;border-radius:4px;background:#eef2ff;color:#4338ca">群体免疫</span></h2>
+    <p class="desc">
+      订阅一份公开的域名名单，别人标出来的内容农场你能直接命中。整个链路只发一个 GET，<b>不上报任何数据</b>。
+      地址可以是你的 Gist、GitHub Pages、对象存储，或本地 <span class="kbd">node scripts/blocklist-server.mjs</span>。
+    </p>
+
+    <input type="url" id="subUrl" placeholder="https://example.com/blocklist.json  或  http://127.0.0.1:8788/blocklist.json" />
+
+    <div class="btnrow">
+      <button class="primary" id="subSave">保存并刷新</button>
+      <button id="subNow">立即刷新</button>
+      <button class="ghost" id="subClear">取消订阅</button>
+    </div>
+
+    <div class="status idle" id="subStatus">尚未订阅</div>
+  </section>
+
+  <!-- ─────────── 名单管理 ─────────── -->
+  <section>
+    <h2>我自己的名单</h2>
+    <p class="desc">
+      每行一个注册域（如 <span class="kbd">example.com</span>）。可疑名单命中 +60，白名单把分数打到 20%。
+      你也可以在答案旁的证据卡里一键加入。
+    </p>
+
+    <div class="lb" style="font-size:12.5px;color:#6b7280;margin-bottom:6px">可疑来源（权重 60）</div>
+    <textarea id="blocklist" placeholder="example-contentfarm.com&#10;example-medical-ads.top"></textarea>
+
+    <div class="lb" style="font-size:12.5px;color:#6b7280;margin:14px 0 6px">可信白名单（降到 20%）</div>
+    <textarea id="allowlist"></textarea>
+
+    <div class="btnrow">
+      <button id="exportList">导出名单（JSON）</button>
+      <button id="importList">导入名单</button>
+      <input type="file" id="importFile" accept="application/json,.json" style="display:none" />
+    </div>
+    <div class="status idle" id="listStatus" style="display:none"></div>
+  </section>
+
+  <!-- ─────────── 外部数据源 ─────────── -->
+  <section>
+    <h2>外部数据源 <span class="c-badge" style="font-size:10.5px;padding:1px 6px;border-radius:4px;background:#fef3c7;color:#92400e">进阶</span></h2>
+    <p class="desc">
+      插件从 DOM 只能看到"平台愿意展示的引用"。用本地代理（mitmproxy）能拿到响应里的 <b>rag snippet</b> ——
+      模型实际读进去的那段文本，判投毒更硬。不配也能正常用。
+    </p>
+    <p class="desc" style="margin-top:-6px">
+      启动：<span class="kbd">pip install mitmproxy</span> → <span class="kbd">mitmdump -s tools/antigeo_addon.py -p 8080</span> → 系统代理指向 127.0.0.1:8080 → 装 mitmproxy 根证书。
+    </p>
+
+    <div class="row">
+      <span class="lb">启用外部数据源<small>拿不到就自动回退到 DOM，不会卡住检测</small></span>
+      <div class="toggle"><input type="checkbox" id="externalSource" /><span class="slider"></span></div>
+    </div>
+
+    <div style="margin-top:10px">
+      <input type="url" id="externalSourceUrl" placeholder="http://127.0.0.1:8765/recent" />
+    </div>
+
+    <div class="btnrow">
+      <button id="extTest">测试连接</button>
+    </div>
+    <div class="status idle" id="extStatus">未启用。启用前先确认本地代理服务已跑起来。</div>
+  </section>
+
+  <!-- ─────────── 站点适配 ─────────── -->
+  <section>
+    <h2>站点适配 <span class="c-badge" style="font-size:10.5px;padding:1px 6px;border-radius:4px;background:#ecfdf5;color:#047857">DOM 改版自救</span></h2>
+    <p class="desc">
+      AI 平台改版换了 class 名，插件就会静默失效。不用等更新 —— 在目标页面点一下"探测"，插件会列出候选的答案容器，你选对的那个，它以后就记住了。
+    </p>
+
+    <div class="btnrow" style="margin-top:4px">
+      <button class="primary" id="probeBtn">探测当前标签页</button>
+      <button class="ghost" id="probeClear">清除本页覆盖</button>
+    </div>
+
+    <div class="status idle" id="probeStatus">还没探测。先打开一个 AI 搜索页（并让它生成带引用的回答），再点上面按钮。</div>
+
+    <div class="cands" id="cands"></div>
+
+    <div class="btnrow" id="probeActions" style="display:none">
+      <button class="primary" id="applyProbe">用这个选择器</button>
+    </div>
+
+    <div class="override-list" id="overrideList"></div>
+  </section>
+
+  <!-- ─────────── 自定义站点 ─────────── -->
+  <section>
+    <h2>自定义站点</h2>
+    <p class="desc">
+      默认已支持 ChatGPT / Perplexity / Google AI 概览 / Bing / 豆包 / Kimi / 元宝 / 秘塔 / DeepSeek / 智谱。其他 AI 站点在此添加域名通配。
+    </p>
+    <textarea id="extraSites" placeholder="chat.example.com&#10;*://ai.example.com/*" style="min-height:76px"></textarea>
+  </section>
+
+  <div class="saved" id="saved">已保存</div>
+</div>
+
+<script src="options.js" type="module"></script>
+</body>
+</html>

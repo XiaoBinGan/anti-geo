@@ -1,0 +1,41 @@
+name: 功能建议
+description: 想要新的检测能力或交互
+title: "[Feature] "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 你遇到的问题
+      description: 先说场景，再说方案。避免「建议加个 XX 功能」这种没有上下文的提议
+      placeholder: |
+        我看到某类投毒手法现在检测不到：……
+        它在页面上的表现是：……
+    validations:
+      required: true
+
+  - type: textarea
+    id: idea
+    attributes:
+      label: 你设想的做法
+      description: 如果有想法写在这，没有也行
+    validations:
+      required: false
+
+  - type: dropdown
+    id: layer
+    attributes:
+      label: 属于哪一层
+      options:
+        - 检测逻辑（src/lib）
+        - 页面交互（src/content）
+        - 设置与数据源
+        - 文档
+        - 不确定
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        **注意**：涉及「自动改写答案」「拦截请求」这类需求，先看 [架构说明](docs/architecture.md) 里各层能力的边界——很多想法在浏览器层做不了，不是不想做。

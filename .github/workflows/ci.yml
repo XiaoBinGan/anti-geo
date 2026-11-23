@@ -1,0 +1,65 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  unit:
+    name: 单元测试 + 静态检查
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 校验 manifest 与资源引用
+        run: |
+          node -e '
+          const fs=require("fs"),path=require("path");
+          const m=JSON.parse(fs.readFileSync("manifest.json","utf8"));
+          const miss=[];const ck=p=>{if(p&&!fs.existsSync(p))miss.push(p)};
+          Object.values(m.icons||{}).forEach(ck);
+          Object.values(m.action?.default_icon||{}).forEach(ck);
+          ck(m.action?.default_popup);ck(m.options_ui?.page);
+          ck(m.background?.service_worker);ck("_locales/"+m.default_locale+"/messages.json");
+          (m.content_scripts||[]).forEach(cs=>(cs.js||[]).forEach(ck));
+          if(miss.length){console.error("缺失:",miss);process.exit(1)}
+          console.log("manifest 引用完整");
+          '
+
+      - name: JS 语法
+        run: |
+          for f in src/background.js src/content/content.js src/lib/*.js src/popup/popup.js src/options/options.js; do
+            cp "$f" /tmp/x.mjs && node --check /tmp/x.mjs || exit 1
+          done
+          echo "全部通过"
+
+      - name: 单元测试
+        run: npm run test:unit
+
+      - name: mitmproxy addon 自测
+        run: python3 tools/antigeo_addon.py --selftest
+
+  browser:
+    name: 真浏览器测试
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 确认 Chrome 可用
+        run: google-chrome --version || chromium --version || echo "无 Chrome，测试会自行跳过"
+
+      - name: 浏览器端到端
+        run: node test/browser-e2e.mjs

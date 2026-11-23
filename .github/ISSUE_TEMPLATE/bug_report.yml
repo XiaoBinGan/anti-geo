@@ -1,0 +1,65 @@
+name: Bug 报告
+description: 功能不对、报错、或者误报漏报
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        提之前先看一眼 [已知限制](https://github.com/XiaoBinGan/anti-geo#已知限制)，有些是设计上的边界。
+
+  - type: input
+    id: version
+    attributes:
+      label: 扩展版本
+      placeholder: "0.4.0（在 chrome://extensions 里能看到）"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 出问题的平台
+      options:
+        - Perplexity
+        - ChatGPT
+        - 智谱清言
+        - 豆包
+        - Kimi
+        - 腾讯元宝
+        - 秘塔
+        - DeepSeek
+        - 其他（在下面说明）
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: 现象
+      description: 期望看到什么，实际看到什么
+      placeholder: |
+        期望：答案上方出现横条
+        实际：什么都没有
+    validations:
+      required: true
+
+  - type: textarea
+    id: probe
+    attributes:
+      label: 探针输出
+      description: |
+        在该页面跑下面这条命令，把结果贴进来。工具 → tools/dom-probe.js
+        ```bash
+        cat tools/dom-probe.js | pbcopy
+        # 然后在页面 F12 → Console → 粘贴 → 回车
+        ```
+      render: json
+
+  - type: textarea
+    id: console
+    attributes:
+      label: 控制台输出
+      description: |
+        F12 → Console，看有没有报错，以及 `window.__ANTIGEO__` 里有什么
+      render: shell

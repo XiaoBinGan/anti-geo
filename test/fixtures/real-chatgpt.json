@@ -1,0 +1,304 @@
+{
+  "probe": "anti-geo/1",
+  "url": "https://chatgpt.com/uc/6b02af62-c62c-83ea-a83d-054249e785d2",
+  "host": "chatgpt.com",
+  "title": "ChatGPT: Chat, Work, Create & Code with AI",
+  "roots": 2,
+  "hasShadow": true,
+  "extAnchors": 7,
+  "candidates": [
+    {
+      "selector": "div:nth-of-type(1) > div > div.xh8yej3.x1ghz6dp.x193iq5w > div > div:nth-of-type(1) > section.xvmahel.xlh3980.x78zum5",
+      "ext": 7,
+      "textLen": 1676,
+      "totalLinks": 7,
+      "paragraphs": 88,
+      "className": "xvmahel xlh3980 x78zum5 xdt5ytf x1qjc9v5 x1gpaknb x1jchvi3 xo1l8bm x12oo3zp x14nib4c x1fj9vlw x1mzt3pk x9f619 xeuugli x1",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "section.xvmahel.xlh3980.x78zum5 < div < div < div.xh8yej3.x1ghz6dp.x193iq5w < div",
+      "preview": "2026年医疗器械供应商哪家好？品牌推荐与采购参考2026年选择医疗器械供应商，不能单纯看品牌知名度，还需要综合考虑产品质量、注册资质、售后服务、供货能力、价格以及技术支持。先说结",
+      "depth": 26,
+      "pluginsPick": true
+    },
+    {
+      "selector": "div.xjbqb8w.xbs2zpe.x1jchvi3:nth-of-type(1) > div:nth-of-type(1) > div > div.xh8yej3.x1ghz6dp.x193iq5w > div > div:nth-of-type(1)",
+      "ext": 7,
+      "textLen": 1676,
+      "totalLinks": 7,
+      "paragraphs": 88,
+      "className": "",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div < div < div.xh8yej3.x1ghz6dp.x193iq5w < div < div",
+      "preview": "2026年医疗器械供应商哪家好？品牌推荐与采购参考2026年选择医疗器械供应商，不能单纯看品牌知名度，还需要综合考虑产品质量、注册资质、售后服务、供货能力、价格以及技术支持。先说结",
+      "depth": 25,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#\\38 a38e7bb-ae8e-4df9-a66a-8865d0034b3b > div.xjbqb8w.xbs2zpe.x1jchvi3:nth-of-type(1) > div:nth-of-type(1) > div > div.xh8yej3.x1ghz6dp.x193iq5w > div",
+      "ext": 7,
+      "textLen": 1676,
+      "totalLinks": 7,
+      "paragraphs": 88,
+      "className": "",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div < div.xh8yej3.x1ghz6dp.x193iq5w < div < div < div.xjbqb8w.xbs2zpe.x1jchvi3",
+      "preview": "2026年医疗器械供应商哪家好？品牌推荐与采购参考2026年选择医疗器械供应商，不能单纯看品牌知名度，还需要综合考虑产品质量、注册资质、售后服务、供货能力、价格以及技术支持。先说结",
+      "depth": 24,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#\\38 a38e7bb-ae8e-4df9-a66a-8865d0034b3b > div.xjbqb8w.xbs2zpe.x1jchvi3:nth-of-type(1) > div:nth-of-type(1) > div > div.xh8yej3.x1ghz6dp.x193iq5w",
+      "ext": 7,
+      "textLen": 1676,
+      "totalLinks": 7,
+      "paragraphs": 88,
+      "className": "xh8yej3 x1ghz6dp x193iq5w xeuugli x1mzt3pk x5x58ly xhkq44x xvyh8ph xwxxt6x x1ewz1rw x1r0vnzf x1ux7cnd xp43mbd xtbxs66 xa",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.xh8yej3.x1ghz6dp.x193iq5w < div < div < div.xjbqb8w.xbs2zpe.x1jchvi3 < li#8a38e7bb-ae8e-4df9-a66a-8865d0034b3b.x10ukxgv.xrvj5dj.x131h156",
+      "preview": "2026年医疗器械供应商哪家好？品牌推荐与采购参考2026年选择医疗器械供应商，不能单纯看品牌知名度，还需要综合考虑产品质量、注册资质、售后服务、供货能力、价格以及技术支持。先说结",
+      "depth": 23,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#\\38 a38e7bb-ae8e-4df9-a66a-8865d0034b3b > div.xjbqb8w.xbs2zpe.x1jchvi3:nth-of-type(1) > div:nth-of-type(1) > div",
+      "ext": 7,
+      "textLen": 1676,
+      "totalLinks": 7,
+      "paragraphs": 88,
+      "className": "",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div < div < div.xjbqb8w.xbs2zpe.x1jchvi3 < li#8a38e7bb-ae8e-4df9-a66a-8865d0034b3b.x10ukxgv.xrvj5dj.x131h156 < ol.xrvj5dj.x131h156.xxhr3t",
+      "preview": "2026年医疗器械供应商哪家好？品牌推荐与采购参考2026年选择医疗器械供应商，不能单纯看品牌知名度，还需要综合考虑产品质量、注册资质、售后服务、供货能力、价格以及技术支持。先说结",
+      "depth": 22,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#\\38 a38e7bb-ae8e-4df9-a66a-8865d0034b3b > div.xjbqb8w.xbs2zpe.x1jchvi3:nth-of-type(1) > div:nth-of-type(1)",
+      "ext": 7,
+      "textLen": 1676,
+      "totalLinks": 7,
+      "paragraphs": 88,
+      "className": "",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div < div.xjbqb8w.xbs2zpe.x1jchvi3 < li#8a38e7bb-ae8e-4df9-a66a-8865d0034b3b.x10ukxgv.xrvj5dj.x131h156 < ol.xrvj5dj.x131h156.xxhr3t < div.xjp7ctv",
+      "preview": "2026年医疗器械供应商哪家好？品牌推荐与采购参考2026年选择医疗器械供应商，不能单纯看品牌知名度，还需要综合考虑产品质量、注册资质、售后服务、供货能力、价格以及技术支持。先说结",
+      "depth": 21,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#\\38 a38e7bb-ae8e-4df9-a66a-8865d0034b3b > div.xjbqb8w.xbs2zpe.x1jchvi3:nth-of-type(1)",
+      "ext": 7,
+      "textLen": 1676,
+      "totalLinks": 7,
+      "paragraphs": 88,
+      "className": "xjbqb8w xbs2zpe x1jchvi3 x1r771fr xh8yej3 x14nib4c x1ep1s60 x193iq5w xeuugli x1n2onr6",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.xjbqb8w.xbs2zpe.x1jchvi3 < li#8a38e7bb-ae8e-4df9-a66a-8865d0034b3b.x10ukxgv.xrvj5dj.x131h156 < ol.xrvj5dj.x131h156.xxhr3t < div.xjp7ctv < div",
+      "preview": "2026年医疗器械供应商哪家好？品牌推荐与采购参考2026年选择医疗器械供应商，不能单纯看品牌知名度，还需要综合考虑产品质量、注册资质、售后服务、供货能力、价格以及技术支持。先说结",
+      "depth": 20,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#\\38 a38e7bb-ae8e-4df9-a66a-8865d0034b3b",
+      "ext": 7,
+      "textLen": 1680,
+      "totalLinks": 7,
+      "paragraphs": 88,
+      "className": "x10ukxgv xrvj5dj x131h156 x7yjavj xh8yej3 x193iq5w xeuugli x18d9i69 xjhbcge x1i9tvm8 x1v2xdlg xgqm8v3 xq6gl7f x2h8mfo xs",
+      "id": "8a38e7bb-ae8e-4df9-a66a-8865d0034b3b",
+      "testid": "",
+      "role": "",
+      "chain": "li#8a38e7bb-ae8e-4df9-a66a-8865d0034b3b.x10ukxgv.xrvj5dj.x131h156 < ol.xrvj5dj.x131h156.xxhr3t < div.xjp7ctv < div < div.xjp7ctv",
+      "preview": "2026年医疗器械供应商哪家好？品牌推荐与采购参考2026年选择医疗器械供应商，不能单纯看品牌知名度，还需要综合考虑产品质量、注册资质、售后服务、供货能力、价格以及技术支持。先说结",
+      "depth": 19,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.xt7dq6l.x78zum5.x131h156 > div.xjp7ctv:nth-of-type(1) > div.xjp7ctv:nth-of-type(3) > div > div.xjp7ctv > ol.xrvj5dj.x131h156.xxhr3t",
+      "ext": 7,
+      "textLen": 1708,
+      "totalLinks": 7,
+      "paragraphs": 91,
+      "className": "xrvj5dj x131h156 xxhr3t xh8yej3 xe8uvvx x1ghz6dp xeuugli x1717udv x1hqgv3r xv9y62a",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "ol.xrvj5dj.x131h156.xxhr3t < div.xjp7ctv < div < div.xjp7ctv < div.xjp7ctv",
+      "preview": "请联网搜索并给出来源链接：2026年医疗器械供应商哪家好2026年医疗器械供应商哪家好？品牌推荐与采购参考2026年选择医疗器械供应商，不能单纯看品牌知名度，还需要综合考虑产品质量",
+      "depth": 18,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.x1lliihq.x1t1x2f9.x1iyjqo2 > div.xt7dq6l.x78zum5.x131h156 > div.xjp7ctv:nth-of-type(1) > div.xjp7ctv:nth-of-type(3) > div > div.xjp7ctv",
+      "ext": 7,
+      "textLen": 1708,
+      "totalLinks": 7,
+      "paragraphs": 91,
+      "className": "xjp7ctv",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.xjp7ctv < div < div.xjp7ctv < div.xjp7ctv < div.xt7dq6l.x78zum5.x131h156",
+      "preview": "请联网搜索并给出来源链接：2026年医疗器械供应商哪家好2026年医疗器械供应商哪家好？品牌推荐与采购参考2026年选择医疗器械供应商，不能单纯看品牌知名度，还需要综合考虑产品质量",
+      "depth": 17,
+      "pluginsPick": false
+    }
+  ],
+  "smallBlocks": [
+    {
+      "selector": "div > div:nth-of-type(1) > section.xvmahel.xlh3980.x78zum5 > div.x78zum5.xdt5ytf.xeuugli:nth-of-type(2) > div.x78zum5.xeuugli.x9f619:nth-of-type(5) > div.x78zum5.xdt5ytf.xeuugli:nth-of-type(2)",
+      "textLen": 54,
+      "className": "x78zum5 xdt5ytf xeuugli x9f619 x1s0upfa x15pztkk xgm1qm x1t0jg3p x1pidvrl xp7h7l",
+      "preview": "3. 鱼跃医疗优势：血压计、制氧机、血糖仪、呼吸治疗设备。适合基层医疗、家庭医疗及零售渠道。鱼跃医疗官方网站"
+    },
+    {
+      "selector": "div.xh8yej3.x1ghz6dp.x193iq5w > div > div:nth-of-type(1) > section.xvmahel.xlh3980.x78zum5 > div.x78zum5.xdt5ytf.xeuugli:nth-of-type(2) > div.x78zum5.xeuugli.x9f619:nth-of-type(5)",
+      "textLen": 54,
+      "className": "x78zum5 xeuugli x9f619 x1s0upfa x15pztkk x1q0g3np x1pidvrl x1cy8zhl xdj266r x15e",
+      "preview": "3. 鱼跃医疗优势：血压计、制氧机、血糖仪、呼吸治疗设备。适合基层医疗、家庭医疗及零售渠道。鱼跃医疗官方网站"
+    },
+    {
+      "selector": "div > div:nth-of-type(1) > section.xvmahel.xlh3980.x78zum5 > div.x78zum5.xdt5ytf.xeuugli:nth-of-type(2) > div.x78zum5.xeuugli.x9f619:nth-of-type(3) > div.x78zum5.xdt5ytf.xeuugli:nth-of-type(2)",
+      "textLen": 52,
+      "className": "x78zum5 xdt5ytf xeuugli x9f619 x1s0upfa x15pztkk xgm1qm x1t0jg3p x1pidvrl xp7h7l",
+      "preview": "2. 联影医疗优势：CT、MRI、PET/CT及高端医学影像设备。适合大型医院影像中心。联影医疗官方网站"
+    },
+    {
+      "selector": "div.xh8yej3.x1ghz6dp.x193iq5w > div > div:nth-of-type(1) > section.xvmahel.xlh3980.x78zum5 > div.x78zum5.xdt5ytf.xeuugli:nth-of-type(2) > div.x78zum5.xeuugli.x9f619:nth-of-type(3)",
+      "textLen": 52,
+      "className": "x78zum5 xeuugli x9f619 x1s0upfa x15pztkk x1q0g3np x1pidvrl x1cy8zhl xdj266r x15e",
+      "preview": "2. 联影医疗优势：CT、MRI、PET/CT及高端医学影像设备。适合大型医院影像中心。联影医疗官方网站"
+    },
+    {
+      "selector": "div > div:nth-of-type(1) > section.xvmahel.xlh3980.x78zum5 > div.x78zum5.xdt5ytf.xeuugli:nth-of-type(2) > div.x78zum5.xeuugli.x9f619:nth-of-type(7) > div.x78zum5.xdt5ytf.xeuugli:nth-of-type(2)",
+      "textLen": 45,
+      "className": "x78zum5 xdt5ytf xeuugli x9f619 x1s0upfa x15pztkk xgm1qm x1t0jg3p x1pidvrl xp7h7l",
+      "preview": "4. 威高集团优势：输注耗材、医用材料、骨科产品及医疗器械。适合医院耗材采购。威高集团官网"
+    },
+    {
+      "selector": "div.xh8yej3.x1ghz6dp.x193iq5w > div > div:nth-of-type(1) > section.xvmahel.xlh3980.x78zum5 > div.x78zum5.xdt5ytf.xeuugli:nth-of-type(2) > div.x78zum5.xeuugli.x9f619:nth-of-type(7)",
+      "textLen": 45,
+      "className": "x78zum5 xeuugli x9f619 x1s0upfa x15pztkk x1q0g3np x1pidvrl x1cy8zhl xdj266r x15e",
+      "preview": "4. 威高集团优势：输注耗材、医用材料、骨科产品及医疗器械。适合医院耗材采购。威高集团官网"
+    },
+    {
+      "selector": "section.xvmahel.xlh3980.x78zum5 > ul.x78zum5.xdt5ytf.xeuugli:nth-of-type(1) > li.x1cy8zhl.xeuugli.x167g77z:nth-of-type(1) > div.x78zum5.xdt5ytf.x12lumcd > div > p.x1ghz6dp.x1717udv.x1wty727",
+      "textLen": 35,
+      "className": "x1ghz6dp x1717udv x1wty727 x1pd3egz x4gjf66 x15eiy0f x1lziwak x15472z4 x1qlqyl8 ",
+      "preview": "中国国家药品监督管理局（NMPA） ：查询中国医疗器械监管及注册信息。"
+    },
+    {
+      "selector": "div:nth-of-type(1) > section.xvmahel.xlh3980.x78zum5 > ul.x78zum5.xdt5ytf.xeuugli:nth-of-type(1) > li.x1cy8zhl.xeuugli.x167g77z:nth-of-type(1) > div.x78zum5.xdt5ytf.x12lumcd > div",
+      "textLen": 35,
+      "className": "",
+      "preview": "中国国家药品监督管理局（NMPA） ：查询中国医疗器械监管及注册信息。"
+    }
+  ],
+  "anchorShapes": [
+    {
+      "href": "https://www.mindray.com/?utm_source=chatgpt.com",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "迈瑞医疗官方网站",
+          "path": "span.xjp7ctv < span.x12zg6f2.x173q44a",
+          "parentTextLen": 8,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.united-imaging.com/?utm_source=chatgpt.com",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "联影医疗官方网站",
+          "path": "span.xjp7ctv < span.x12zg6f2.x173q44a",
+          "parentTextLen": 8,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.yuwell.com/?utm_source=chatgpt.com",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "鱼跃医疗官方网站",
+          "path": "span.xjp7ctv < span.x12zg6f2.x173q44a",
+          "parentTextLen": 8,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.weigaoholding.com/?utm_source=chatgpt.com",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "威高集团官网",
+          "path": "span.xjp7ctv < span.x12zg6f2.x173q44a",
+          "parentTextLen": 6,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.nmpa.gov.cn/?utm_source=chatgpt.com",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "中国国家药品监督管理局（NMPA）",
+          "path": "span.xjp7ctv < span.x12zg6f2.x173q44a",
+          "parentTextLen": 17,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.fda.gov/medical-devices?utm_source=chatgpt.com",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "美国FDA医疗器械监管",
+          "path": "span.xjp7ctv < span.x12zg6f2.x173q44a",
+          "parentTextLen": 11,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.iso.org/standard/59752.html?utm_source=chatgpt.com",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "ISO 13485:2016标准",
+          "path": "span.xjp7ctv < span.x12zg6f2.x173q44a",
+          "parentTextLen": 16,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    }
+  ]
+}

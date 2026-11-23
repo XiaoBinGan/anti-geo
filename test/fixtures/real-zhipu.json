@@ -1,0 +1,541 @@
+{
+  "probe": "anti-geo/1",
+  "url": "https://chatglm.cn/chat/general/6b01cd474bbe1e94be8df0d8",
+  "host": "chatglm.cn",
+  "title": "AgentMore - 智谱清言 | 多 Agent 云端协作平台",
+  "roots": 1,
+  "hasShadow": false,
+  "extAnchors": 40,
+  "candidates": [
+    {
+      "selector": "div.chat-list__message-main > div.assistant-message-item.assistant-message-item--general > div.assistant-message-item__main > div.assistant-message-item__content.assistant-message-item__content-box:nth-of-type(1) > div.assistant-message-item__bubble-content > div.message-content-wrapper",
+      "ext": 40,
+      "textLen": 10255,
+      "totalLinks": 40,
+      "paragraphs": 51,
+      "className": "message-content-wrapper",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.message-content-wrapper < div.assistant-message-item__bubble-content < div.assistant-message-item__content.assistant-message-item__content-box < div.assistant-message-item__main < div.assistant-message-item.assistant-message-item--general",
+      "preview": "思考结束好的，用户想了解2026年哪家医疗器械供应商比较好，这是一个需要综合评估的专业问题。我需要从多个维度来构建回答，包括品牌综合实力、细分领域优势、市场表现和未来趋势等。 根据",
+      "depth": 22,
+      "pluginsPick": true
+    },
+    {
+      "selector": "div.chat-list__message-row:nth-of-type(2) > div.chat-list__message-main > div.assistant-message-item.assistant-message-item--general > div.assistant-message-item__main > div.assistant-message-item__content.assistant-message-item__content-box:nth-of-type(1) > div.assistant-message-item__bubble-content",
+      "ext": 40,
+      "textLen": 10255,
+      "totalLinks": 40,
+      "paragraphs": 51,
+      "className": "assistant-message-item__bubble-content",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.assistant-message-item__bubble-content < div.assistant-message-item__content.assistant-message-item__content-box < div.assistant-message-item__main < div.assistant-message-item.assistant-message-item--general < div.chat-list__message-main",
+      "preview": "思考结束好的，用户想了解2026年哪家医疗器械供应商比较好，这是一个需要综合评估的专业问题。我需要从多个维度来构建回答，包括品牌综合实力、细分领域优势、市场表现和未来趋势等。 根据",
+      "depth": 21,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.messages-wrapper > div.chat-list__message-row:nth-of-type(2) > div.chat-list__message-main > div.assistant-message-item.assistant-message-item--general > div.assistant-message-item__main > div.assistant-message-item__content.assistant-message-item__content-box:nth-of-type(1)",
+      "ext": 40,
+      "textLen": 10255,
+      "totalLinks": 40,
+      "paragraphs": 51,
+      "className": "assistant-message-item__content assistant-message-item__content-box",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.assistant-message-item__content.assistant-message-item__content-box < div.assistant-message-item__main < div.assistant-message-item.assistant-message-item--general < div.chat-list__message-main < div.chat-list__message-row",
+      "preview": "思考结束好的，用户想了解2026年哪家医疗器械供应商比较好，这是一个需要综合评估的专业问题。我需要从多个维度来构建回答，包括品牌综合实力、细分领域优势、市场表现和未来趋势等。 根据",
+      "depth": 20,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.chat-list > div.messages-wrapper > div.chat-list__message-row:nth-of-type(2) > div.chat-list__message-main > div.assistant-message-item.assistant-message-item--general > div.assistant-message-item__main",
+      "ext": 40,
+      "textLen": 10255,
+      "totalLinks": 40,
+      "paragraphs": 51,
+      "className": "assistant-message-item__main",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.assistant-message-item__main < div.assistant-message-item.assistant-message-item--general < div.chat-list__message-main < div.chat-list__message-row < div.messages-wrapper",
+      "preview": "思考结束好的，用户想了解2026年哪家医疗器械供应商比较好，这是一个需要综合评估的专业问题。我需要从多个维度来构建回答，包括品牌综合实力、细分领域优势、市场表现和未来趋势等。 根据",
+      "depth": 19,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.chat-container-layout:nth-of-type(1) > div.chat-list > div.messages-wrapper > div.chat-list__message-row:nth-of-type(2) > div.chat-list__message-main > div.assistant-message-item.assistant-message-item--general",
+      "ext": 40,
+      "textLen": 10255,
+      "totalLinks": 40,
+      "paragraphs": 51,
+      "className": "assistant-message-item assistant-message-item--general",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.assistant-message-item.assistant-message-item--general < div.chat-list__message-main < div.chat-list__message-row < div.messages-wrapper < div.chat-list",
+      "preview": "思考结束好的，用户想了解2026年哪家医疗器械供应商比较好，这是一个需要综合评估的专业问题。我需要从多个维度来构建回答，包括品牌综合实力、细分领域优势、市场表现和未来趋势等。 根据",
+      "depth": 18,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.chat-wrapper > div.chat-container-layout:nth-of-type(1) > div.chat-list > div.messages-wrapper > div.chat-list__message-row:nth-of-type(2) > div.chat-list__message-main",
+      "ext": 40,
+      "textLen": 10255,
+      "totalLinks": 40,
+      "paragraphs": 51,
+      "className": "chat-list__message-main",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.chat-list__message-main < div.chat-list__message-row < div.messages-wrapper < div.chat-list < div.chat-container-layout",
+      "preview": "思考结束好的，用户想了解2026年哪家医疗器械供应商比较好，这是一个需要综合评估的专业问题。我需要从多个维度来构建回答，包括品牌综合实力、细分领域优势、市场表现和未来趋势等。 根据",
+      "depth": 17,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.page-container > div.chat-wrapper > div.chat-container-layout:nth-of-type(1) > div.chat-list > div.messages-wrapper > div.chat-list__message-row:nth-of-type(2)",
+      "ext": 40,
+      "textLen": 10255,
+      "totalLinks": 40,
+      "paragraphs": 51,
+      "className": "chat-list__message-row",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.chat-list__message-row < div.messages-wrapper < div.chat-list < div.chat-container-layout < div.chat-wrapper",
+      "preview": "思考结束好的，用户想了解2026年哪家医疗器械供应商比较好，这是一个需要综合评估的专业问题。我需要从多个维度来构建回答，包括品牌综合实力、细分领域优势、市场表现和未来趋势等。 根据",
+      "depth": 16,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.layout-main.min-h-0.flex-1 > div.page-container > div.chat-wrapper > div.chat-container-layout:nth-of-type(1) > div.chat-list > div.messages-wrapper",
+      "ext": 40,
+      "textLen": 10270,
+      "totalLinks": 40,
+      "paragraphs": 51,
+      "className": "messages-wrapper",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.messages-wrapper < div.chat-list < div.chat-container-layout < div.chat-wrapper < div.page-container",
+      "preview": "2026年医疗器械供应商哪家好思考结束好的，用户想了解2026年哪家医疗器械供应商比较好，这是一个需要综合评估的专业问题。我需要从多个维度来构建回答，包括品牌综合实力、细分领域优势",
+      "depth": 15,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.layout-content.min-h-0.flex-1 > div.layout-main.min-h-0.flex-1 > div.page-container > div.chat-wrapper > div.chat-container-layout:nth-of-type(1) > div.chat-list",
+      "ext": 40,
+      "textLen": 10270,
+      "totalLinks": 40,
+      "paragraphs": 51,
+      "className": "chat-list",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.chat-list < div.chat-container-layout < div.chat-wrapper < div.page-container < div.layout-main.min-h-0.flex-1",
+      "preview": "2026年医疗器械供应商哪家好思考结束好的，用户想了解2026年哪家医疗器械供应商比较好，这是一个需要综合评估的专业问题。我需要从多个维度来构建回答，包括品牌综合实力、细分领域优势",
+      "depth": 14,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.assistant-message-item__content.assistant-message-item__content-box:nth-of-type(1) > div.assistant-message-item__bubble-content > div.message-content-wrapper > div.part-bubble-container.flex.is-full-width:nth-of-type(2) > div.part-bubble > div.markdown-body",
+      "ext": 34,
+      "textLen": 9590,
+      "totalLinks": 34,
+      "paragraphs": 45,
+      "className": "markdown-body",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.markdown-body < div.part-bubble < div.part-bubble-container.flex.is-full-width < div.message-content-wrapper < div.assistant-message-item__bubble-content",
+      "preview": "为您梳理了2026年备受关注的医疗器械供应商。选择“哪家好”高度取决于您的具体需求，例如采购大型影像设备、高值耗材、家用器械，还是寻求供应链合作。下面我将结合权威榜单、行业趋势和细",
+      "depth": 25,
+      "pluginsPick": false
+    }
+  ],
+  "smallBlocks": [
+    {
+      "selector": "div.part-bubble-container.flex.is-full-width:nth-of-type(2) > div.part-bubble > div.markdown-body > div:nth-of-type(3) > ul:nth-of-type(1) > li:nth-of-type(2)",
+      "textLen": 54,
+      "className": "",
+      "preview": "骨科/关节：史赛克、捷迈邦美、强生（DePuy Synthes）、施乐辉是国际巨头m.maigoo.com。"
+    },
+    {
+      "selector": "div:nth-of-type(1) > div.markdown-table-wrap > table > tbody > tr:nth-of-type(1) > td:nth-of-type(5)",
+      "textLen": 23,
+      "className": "",
+      "preview": "93.3 / 9.0分m.maigoo.com"
+    },
+    {
+      "selector": "div:nth-of-type(1) > div.markdown-table-wrap > table > tbody > tr:nth-of-type(2) > td:nth-of-type(5)",
+      "textLen": 23,
+      "className": "",
+      "preview": "92.2 / 8.6分m.maigoo.com"
+    },
+    {
+      "selector": "div:nth-of-type(1) > div.markdown-table-wrap > table > tbody > tr:nth-of-type(3) > td:nth-of-type(5)",
+      "textLen": 23,
+      "className": "",
+      "preview": "91.1 / 9.1分m.maigoo.com"
+    },
+    {
+      "selector": "div:nth-of-type(1) > div.markdown-table-wrap > table > tbody > tr:nth-of-type(4) > td:nth-of-type(5)",
+      "textLen": 23,
+      "className": "",
+      "preview": "88.4 / 8.8分m.maigoo.com"
+    },
+    {
+      "selector": "div:nth-of-type(1) > div.markdown-table-wrap > table > tbody > tr:nth-of-type(5) > td:nth-of-type(5)",
+      "textLen": 23,
+      "className": "",
+      "preview": "89.7 / 8.9分m.maigoo.com"
+    },
+    {
+      "selector": "div:nth-of-type(1) > div.markdown-table-wrap > table > tbody > tr:nth-of-type(6) > td:nth-of-type(5)",
+      "textLen": 23,
+      "className": "",
+      "preview": "87.2 / 9.2分m.maigoo.com"
+    },
+    {
+      "selector": "div:nth-of-type(1) > div.markdown-table-wrap > table > tbody > tr:nth-of-type(7) > td:nth-of-type(5)",
+      "textLen": 23,
+      "className": "",
+      "preview": "85.1 / 8.9分m.maigoo.com"
+    }
+  ],
+  "anchorShapes": [
+    {
+      "href": "https://www.maigoo.com/shida/list_1410.html",
+      "occurrences": 12,
+      "shapes": [
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://m.maigoo.com/news/755737.html",
+      "occurrences": 3,
+      "shapes": [
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://m.cnpp100.com/top/yiliaoqixie",
+      "occurrences": 2,
+      "shapes": [
+        {
+          "anchorText": "m.cnpp100.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 13,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.cnpp100.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 13,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.medteccn.com/media/pressreleases/26139.html",
+      "occurrences": 7,
+      "shapes": [
+        {
+          "anchorText": "www.medteccn.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 16,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.medteccn.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 16,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.medteccn.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 16,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.medteccn.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 16,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.medteccn.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 16,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.medteccn.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 16,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "www.medteccn.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 16,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.medteccn.com/media/exhibitorpress/27208.html",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "www.medteccn.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 16,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://m.maigoo.com/best/51609.html",
+      "occurrences": 10,
+      "shapes": [
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "m.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 12,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.maigoo.com/best/44589.html?paramstr=interest_col,interestid:1369-357054,page:2,num:5,max",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "www.maigoo.com",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 14,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://best-consulting.cn/knowledge-base/baisitezixun2026dajiankangxingyefuwukehupandianyiz",
+      "occurrences": 4,
+      "shapes": [
+        {
+          "anchorText": "best-consulting.cn",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 18,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "best-consulting.cn",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 18,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "best-consulting.cn",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 18,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "best-consulting.cn",
+          "path": "span.search-source-item-label < span.search-source-placeholder",
+          "parentTextLen": 18,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    }
+  ]
+}

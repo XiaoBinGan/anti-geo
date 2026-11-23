@@ -1,0 +1,40 @@
+name: 平台适配
+description: 新增一个 AI 平台的适配，或某平台的适配失效了
+title: "[Platform] "
+labels: ["platform"]
+body:
+  - type: input
+    id: site
+    attributes:
+      label: 平台名称与网址
+      placeholder: "某某 AI · https://chat.example.com"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 类型
+      options:
+        - 新平台（完全没适配过）
+        - 已有适配失效（平台改版了）
+    validations:
+      required: true
+
+  - type: textarea
+    id: probe
+    attributes:
+      label: 探针输出
+      description: |
+        提问一个**会触发检索**的问题（例如「2026年XX排名，请联网搜索并列出参考来源」），
+        等答案出完，在页面 Console 里跑 `tools/dom-probe.js`，把 JSON 贴进来。
+      render: json
+    validations:
+      required: true
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: 补充观察
+      description: |
+        比如：引用是「点击直接跳转」还是「弹浮层」、要不要登录、有没有 Shadow DOM

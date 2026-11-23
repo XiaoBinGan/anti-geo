@@ -1,0 +1,28 @@
+# 依赖
+node_modules/
+.pnpm-store/
+
+# 构建产物
+dist/
+*.zip
+
+# 测试产物
+tools/snapshots/
+test/fixtures/*.tmp
+*.log
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 本地配置
+.env
+.env.local

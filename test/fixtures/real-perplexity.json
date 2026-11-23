@@ -1,0 +1,210 @@
+{
+  "probe": "anti-geo/1",
+  "url": "https://www.perplexity.ai/session/56c651a3-cde4-4765-ac44-784a1e594e94",
+  "host": "www.perplexity.ai",
+  "title": "2026年医疗器械供应商哪家好",
+  "roots": 2,
+  "hasShadow": true,
+  "extAnchors": 4,
+  "candidates": [
+    {
+      "selector": "div.contents > div.contents > div.contents > div.break-words.min-w-0.flex-1 > div > div.prose.inline.leading-relaxed",
+      "ext": 4,
+      "textLen": 1744,
+      "totalLinks": 4,
+      "paragraphs": 33,
+      "className": "prose dark:prose-invert inline leading-relaxed break-words min-w-0 [word-break:break-word] [&_>*:first-child]:mt-0 [&_>*",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.prose.dark:prose-invert.inline < div < div.break-words.min-w-0.flex-1 < div.contents < div.contents",
+      "preview": "2026年“哪家医疗器械供应商好”没有唯一答案：采购方应按产品类别、注册资质、临床/使用场景、售后服务和供应链稳定性来选，而不是只看品牌排名。全球头部制造商包括美敦力、强生医疗、西",
+      "depth": 32,
+      "pluginsPick": true
+    },
+    {
+      "selector": "div:nth-of-type(2) > div.contents > div.contents > div.contents > div.break-words.min-w-0.flex-1 > div",
+      "ext": 4,
+      "textLen": 1744,
+      "totalLinks": 4,
+      "paragraphs": 33,
+      "className": "",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div < div.break-words.min-w-0.flex-1 < div.contents < div.contents < div.contents",
+      "preview": "2026年“哪家医疗器械供应商好”没有唯一答案：采购方应按产品类别、注册资质、临床/使用场景、售后服务和供应链稳定性来选，而不是只看品牌排名。全球头部制造商包括美敦力、强生医疗、西",
+      "depth": 31,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.flex.flex-col.flex-1:nth-of-type(1) > div:nth-of-type(2) > div.contents > div.contents > div.contents > div.break-words.min-w-0.flex-1",
+      "ext": 4,
+      "textLen": 1744,
+      "totalLinks": 4,
+      "paragraphs": 33,
+      "className": "break-words min-w-0 flex-1",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.break-words.min-w-0.flex-1 < div.contents < div.contents < div.contents < div",
+      "preview": "2026年“哪家医疗器械供应商好”没有唯一答案：采购方应按产品类别、注册资质、临床/使用场景、售后服务和供应链稳定性来选，而不是只看品牌排名。全球头部制造商包括美敦力、强生医疗、西",
+      "depth": 30,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.flex.flex-col.mt-2 > div.flex.flex-col.flex-1:nth-of-type(1) > div:nth-of-type(2) > div.contents > div.contents > div.contents",
+      "ext": 4,
+      "textLen": 1744,
+      "totalLinks": 4,
+      "paragraphs": 33,
+      "className": "contents",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.contents < div.contents < div.contents < div < div.flex.flex-col.flex-1",
+      "preview": "2026年“哪家医疗器械供应商好”没有唯一答案：采购方应按产品类别、注册资质、临床/使用场景、售后服务和供应链稳定性来选，而不是只看品牌排名。全球头部制造商包括美敦力、强生医疗、西",
+      "depth": 29,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.w-full.flex.flex-col > div.flex.flex-col.mt-2 > div.flex.flex-col.flex-1:nth-of-type(1) > div:nth-of-type(2) > div.contents > div.contents",
+      "ext": 4,
+      "textLen": 1744,
+      "totalLinks": 4,
+      "paragraphs": 33,
+      "className": "contents",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.contents < div.contents < div < div.flex.flex-col.flex-1 < div.group/partition.flex.flex-col",
+      "preview": "2026年“哪家医疗器械供应商好”没有唯一答案：采购方应按产品类别、注册资质、临床/使用场景、售后服务和供应链稳定性来选，而不是只看品牌排名。全球头部制造商包括美敦力、强生医疗、西",
+      "depth": 28,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.w-full:nth-of-type(2) > div.w-full.flex.flex-col > div.flex.flex-col.mt-2 > div.flex.flex-col.flex-1:nth-of-type(1) > div:nth-of-type(2) > div.contents",
+      "ext": 4,
+      "textLen": 1744,
+      "totalLinks": 4,
+      "paragraphs": 33,
+      "className": "contents",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.contents < div < div.flex.flex-col.flex-1 < div.group/partition.flex.flex-col < div.w-full.flex.flex-col",
+      "preview": "2026年“哪家医疗器械供应商好”没有唯一答案：采购方应按产品类别、注册资质、临床/使用场景、售后服务和供应链稳定性来选，而不是只看品牌排名。全球头部制造商包括美敦力、强生医疗、西",
+      "depth": 27,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.flex.flex-col.gap-2 > div.w-full:nth-of-type(2) > div.w-full.flex.flex-col > div.flex.flex-col.mt-2 > div.flex.flex-col.flex-1:nth-of-type(1) > div:nth-of-type(2)",
+      "ext": 4,
+      "textLen": 1744,
+      "totalLinks": 4,
+      "paragraphs": 33,
+      "className": "",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div < div.flex.flex-col.flex-1 < div.group/partition.flex.flex-col < div.w-full.flex.flex-col < div.w-full",
+      "preview": "2026年“哪家医疗器械供应商好”没有唯一答案：采购方应按产品类别、注册资质、临床/使用场景、售后服务和供应链稳定性来选，而不是只看品牌排名。全球头部制造商包括美敦力、强生医疗、西",
+      "depth": 26,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.flex.flex-col:nth-of-type(1) > div.flex.flex-col.gap-2 > div.w-full:nth-of-type(2) > div.w-full.flex.flex-col > div.flex.flex-col.mt-2 > div.flex.flex-col.flex-1:nth-of-type(1)",
+      "ext": 4,
+      "textLen": 1747,
+      "totalLinks": 4,
+      "paragraphs": 33,
+      "className": "flex flex-col flex-1 min-w-0 gap-4 [&+[data-workflow-text-footer]]:mt-1",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.flex.flex-col.flex-1 < div.group/partition.flex.flex-col < div.w-full.flex.flex-col < div.w-full < div.flex.flex-col.gap-2",
+      "preview": "已完成2026年“哪家医疗器械供应商好”没有唯一答案：采购方应按产品类别、注册资质、临床/使用场景、售后服务和供应链稳定性来选，而不是只看品牌排名。全球头部制造商包括美敦力、强生医",
+      "depth": 25,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.flex.flex-col.gap-4 > div.flex.flex-col:nth-of-type(1) > div.flex.flex-col.gap-2 > div.w-full:nth-of-type(2) > div.w-full.flex.flex-col > div.flex.flex-col.mt-2",
+      "ext": 4,
+      "textLen": 1753,
+      "totalLinks": 4,
+      "paragraphs": 33,
+      "className": "group/partition flex flex-col group/final-text mt-2",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.group/partition.flex.flex-col < div.w-full.flex.flex-col < div.w-full < div.flex.flex-col.gap-2 < div.flex.flex-col",
+      "preview": "已完成2026年“哪家医疗器械供应商好”没有唯一答案：采购方应按产品类别、注册资质、临床/使用场景、售后服务和供应链稳定性来选，而不是只看品牌排名。全球头部制造商包括美敦力、强生医",
+      "depth": 24,
+      "pluginsPick": false
+    },
+    {
+      "selector": "div.mx-auto.flex.flex-col > div.flex.flex-col.gap-4 > div.flex.flex-col:nth-of-type(1) > div.flex.flex-col.gap-2 > div.w-full:nth-of-type(2) > div.w-full.flex.flex-col",
+      "ext": 4,
+      "textLen": 1753,
+      "totalLinks": 4,
+      "paragraphs": 33,
+      "className": "w-full flex flex-col",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.w-full.flex.flex-col < div.w-full < div.flex.flex-col.gap-2 < div.flex.flex-col < div.flex.flex-col.gap-4",
+      "preview": "已完成2026年“哪家医疗器械供应商好”没有唯一答案：采购方应按产品类别、注册资质、临床/使用场景、售后服务和供应链稳定性来选，而不是只看品牌排名。全球头部制造商包括美敦力、强生医",
+      "depth": 23,
+      "pluginsPick": false
+    }
+  ],
+  "smallBlocks": [],
+  "anchorShapes": [
+    {
+      "href": "https://www.inventorysource.com/top-medical-equipment-suppliers/",
+      "occurrences": 2,
+      "shapes": [
+        {
+          "anchorText": "inventorysource",
+          "path": "span.citation.inline < span.inline-flex",
+          "parentTextLen": 15,
+          "title": "",
+          "ariaLabel": ""
+        },
+        {
+          "anchorText": "inventorysource",
+          "path": "span.citation.inline < span.inline-flex",
+          "parentTextLen": 15,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.cnpp.cn/china/2026/list_1410.html",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "cnpp",
+          "path": "span.citation.inline < span.inline-flex",
+          "parentTextLen": 4,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.cnblogs.com/qyzxzx/articles/19849307",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "cnblogs",
+          "path": "span.citation.inline < span.inline-flex",
+          "parentTextLen": 7,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    }
+  ]
+}

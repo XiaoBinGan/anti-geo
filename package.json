@@ -1,0 +1,56 @@
+{
+  "name": "anti-geo",
+  "version": "0.4.1",
+  "private": true,
+  "type": "module",
+  "description": "检测 AI 搜索答案里的 GEO 投毒：站群模板、隐藏指令注入、伪装摘要。纯本地运行的浏览器扩展。",
+  "scripts": {
+    "test": "npm run test:all",
+    "test:unit": "node test/scoring.test.mjs && node test/community.test.mjs && node test/snippet.test.mjs && node test/real-snapshot.test.mjs && node test/e2e-subscribe.mjs && node test/external-source.test.mjs",
+    "test:browser": "node test/browser-e2e.mjs",
+    "test:all": "npm run test:unit && npm run test:browser",
+    "test:probe": "node test/probe.mjs",
+    "test:addon": "python3 tools/antigeo_addon.py --selftest",
+    "serve:list": "node scripts/blocklist-server.mjs --watch",
+    "serve:proxy": "python3 tools/antigeo_addon.py --serve --seed",
+    "proxy": "mitmdump -s tools/antigeo_addon.py -p 8080",
+    "test:ci": "npm run test:unit && node test/browser-e2e.mjs",
+    "audit:manifest": "node -e \"const m=require('./manifest.json');console.log('权限:',m.permissions.join(', '));console.log('主机:',(m.host_permissions||[]).join(', '))\"",
+    "package": "node scripts/package.mjs"
+  },
+  "license": "MIT",
+  "author": "XiaoBinGan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XiaoBinGan/anti-geo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/XiaoBinGan/anti-geo/issues"
+  },
+  "homepage": "https://github.com/XiaoBinGan/anti-geo#readme",
+  "keywords": [
+    "browser-extension",
+    "manifest-v3",
+    "ai-search",
+    "geo",
+    "generative-engine-optimization",
+    "citation-verification",
+    "content-farm",
+    "simhash",
+    "privacy",
+    "llm-security"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "src/",
+    "assets/",
+    "_locales/",
+    "manifest.json",
+    "README.md",
+    "LICENSE",
+    "PRIVACY.md",
+    "CHANGELOG.md"
+  ]
+}

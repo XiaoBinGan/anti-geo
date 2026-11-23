@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "updated": "2026-11-20",
+  "name": "示例名单（占位域名，请替换成你自己维护的）",
+  "_comment": "这是格式示例，域名全部是占位符，命中不了任何真实站点。部署你自己的名单时改 domains 数组即可：字符串数组或对象数组都接受。score 可省略（默认 45），reason 只用于证据卡上的展示文案。",
+  "domains": [
+    { "d": "example-contentfarm-a.com", "reason": "contentfarm", "score": 55 },
+    { "d": "example-contentfarm-b.com", "reason": "contentfarm", "score": 55 },
+    { "d": "example-astroturf-clinic.top", "reason": "astroturf", "score": 60 },
+    { "d": "example-buy-ranking.xyz", "reason": "paid-ranking", "score": 60 },
+    { "d": "example-review-mill.icu", "reason": "fake-review", "score": 55 }
+  ],
+  "allow": [
+    "example.gov.cn",
+    "example.edu.cn"
+  ]
+}

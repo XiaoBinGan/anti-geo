@@ -1,0 +1,10 @@
+{
+  "extName": {
+    "message": "反GEO · AI 答案溯源",
+    "description": "扩展名称"
+  },
+  "extDesc": {
+    "message": "检测 AI 搜索答案里的 GEO 投毒：站群互引、模板农场、隐藏指令注入、无一手来源。纯本地运行。",
+    "description": "扩展描述"
+  }
+}

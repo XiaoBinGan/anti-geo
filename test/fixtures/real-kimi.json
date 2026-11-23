@@ -1,0 +1,229 @@
+{
+  "probe": "anti-geo/1",
+  "url": "https://www.kimi.com/",
+  "host": "www.kimi.com",
+  "title": "Kimi AI 官网：K3.1 Pro 上线，编程与智能体任务全面升级",
+  "roots": 2,
+  "hasShadow": true,
+  "extAnchors": 4,
+  "candidates": [
+    {
+      "selector": "div.layout-content-main:nth-of-type(2) > div.home-page > div.home-bottom.home-bottom--landing:nth-of-type(2) > div.home-landing > div.home-landing-tail > div.legal-footer.legal-footer--default",
+      "ext": 3,
+      "textLen": 89,
+      "totalLinks": 3,
+      "paragraphs": 0,
+      "className": "legal-footer legal-footer--default legal-footer",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.legal-footer.legal-footer--default.legal-footer < div.home-landing-tail < div.home-landing < div.home-bottom.home-bottom--landing < div.home-page",
+      "preview": "内容由AI生成，请仔细甄别 © 2026 北京月之暗面科技股份有限公司 京ICP备2023011302号-14 京B2-20240852 京公网安备11010802043150号",
+      "depth": 13,
+      "pluginsPick": true
+    },
+    {
+      "selector": "#chat-container > div.layout-content-main:nth-of-type(2) > div.home-page > div.home-bottom.home-bottom--landing:nth-of-type(2) > div.home-landing > div.home-landing-tail",
+      "ext": 3,
+      "textLen": 94,
+      "totalLinks": 3,
+      "paragraphs": 0,
+      "className": "home-landing-tail",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.home-landing-tail < div.home-landing < div.home-bottom.home-bottom--landing < div.home-page < div.layout-content-main",
+      "preview": "内容由AI生成，请仔细甄别 © 2026 北京月之暗面科技股份有限公司 京ICP备2023011302号-14 京B2-20240852 京公网安备11010802043150号 ",
+      "depth": 12,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#chat-container > div.layout-content-main:nth-of-type(2) > div.home-page > div.home-bottom.home-bottom--landing:nth-of-type(2) > div.home-landing",
+      "ext": 3,
+      "textLen": 94,
+      "totalLinks": 3,
+      "paragraphs": 0,
+      "className": "home-landing",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.home-landing < div.home-bottom.home-bottom--landing < div.home-page < div.layout-content-main < div#chat-container.layout-content",
+      "preview": "内容由AI生成，请仔细甄别 © 2026 北京月之暗面科技股份有限公司 京ICP备2023011302号-14 京B2-20240852 京公网安备11010802043150号 ",
+      "depth": 11,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#chat-container > div.layout-content-main:nth-of-type(2) > div.home-page > div.home-bottom.home-bottom--landing:nth-of-type(2)",
+      "ext": 3,
+      "textLen": 94,
+      "totalLinks": 3,
+      "paragraphs": 0,
+      "className": "home-bottom home-bottom--landing",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.home-bottom.home-bottom--landing < div.home-page < div.layout-content-main < div#chat-container.layout-content < div#page-layout-container.layout-container.transparent.home-page-layout",
+      "preview": "内容由AI生成，请仔细甄别 © 2026 北京月之暗面科技股份有限公司 京ICP备2023011302号-14 京B2-20240852 京公网安备11010802043150号 ",
+      "depth": 10,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#chat-container > div.layout-content-main:nth-of-type(2) > div.home-page",
+      "ext": 3,
+      "textLen": 11121,
+      "totalLinks": 10,
+      "paragraphs": 1,
+      "className": "home-page",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.home-page < div.layout-content-main < div#chat-container.layout-content < div#page-layout-container.layout-container.transparent.home-page-layout < div.main",
+      "preview": "2026年医疗器械供应商哪家比较好 K3 进阶 选择项目 插件 [data-animation-icon-layer][hidden]{display:none!important",
+      "depth": 9,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#chat-container > div.layout-content-main:nth-of-type(2)",
+      "ext": 3,
+      "textLen": 11121,
+      "totalLinks": 10,
+      "paragraphs": 1,
+      "className": "layout-content-main",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.layout-content-main < div#chat-container.layout-content < div#page-layout-container.layout-container.transparent.home-page-layout < div.main < div.app.has-sidebar.sidebar-interactive",
+      "preview": "2026年医疗器械供应商哪家比较好 K3 进阶 选择项目 插件 [data-animation-icon-layer][hidden]{display:none!important",
+      "depth": 8,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#chat-container",
+      "ext": 3,
+      "textLen": 13453,
+      "totalLinks": 10,
+      "paragraphs": 1,
+      "className": "layout-content",
+      "id": "chat-container",
+      "testid": "",
+      "role": "",
+      "chain": "div#chat-container.layout-content < div#page-layout-container.layout-container.transparent.home-page-layout < div.main < div.app.has-sidebar.sidebar-interactive < div.n-config-provider",
+      "preview": "#LeftBar2Timeline1Icon-enter-rs-pm22zp-mh2{transform-box:view-box;transform-origin:0 0;ani",
+      "depth": 7,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#page-layout-container",
+      "ext": 3,
+      "textLen": 13453,
+      "totalLinks": 10,
+      "paragraphs": 1,
+      "className": "layout-container transparent home-page-layout scrollbar-placeholder",
+      "id": "page-layout-container",
+      "testid": "",
+      "role": "",
+      "chain": "div#page-layout-container.layout-container.transparent.home-page-layout < div.main < div.app.has-sidebar.sidebar-interactive < div.n-config-provider < div#app",
+      "preview": "#LeftBar2Timeline1Icon-enter-rs-pm22zp-mh2{transform-box:view-box;transform-origin:0 0;ani",
+      "depth": 6,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#app > div.n-config-provider > div.app.has-sidebar.sidebar-interactive:nth-of-type(1) > div.main:nth-of-type(2)",
+      "ext": 3,
+      "textLen": 13453,
+      "totalLinks": 10,
+      "paragraphs": 1,
+      "className": "main",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.main < div.app.has-sidebar.sidebar-interactive < div.n-config-provider < div#app < body",
+      "preview": "#LeftBar2Timeline1Icon-enter-rs-pm22zp-mh2{transform-box:view-box;transform-origin:0 0;ani",
+      "depth": 5,
+      "pluginsPick": false
+    },
+    {
+      "selector": "#app > div.n-config-provider > div.app.has-sidebar.sidebar-interactive:nth-of-type(1)",
+      "ext": 3,
+      "textLen": 28181,
+      "totalLinks": 18,
+      "paragraphs": 1,
+      "className": "app has-sidebar sidebar-interactive enable-layout-animation",
+      "id": "",
+      "testid": "",
+      "role": "",
+      "chain": "div.app.has-sidebar.sidebar-interactive < div.n-config-provider < div#app < body < html.dark",
+      "preview": "#LeftBarAnimatedIcon-enter-rs-1sihg8c-mh2{transform-box:view-box;transform-origin:0 0;anim",
+      "depth": 4,
+      "pluginsPick": false
+    }
+  ],
+  "smallBlocks": [
+    {
+      "selector": "div:nth-of-type(3) > div.login-modal-next-mask > div.login-desktop-cn > div.login-desktop-cn__card:nth-of-type(2) > div.login-desktop-cn__main > div.login-desktop-cn__footer:nth-of-type(2)",
+      "textLen": 54,
+      "className": "login-desktop-cn__footer",
+      "preview": "已阅读同意 《模型服务协议》 和 《用户隐私协议》 中国大陆以外请访问 kimi.ai， 遇到问题？ 去反馈"
+    },
+    {
+      "selector": "div.login-modal-next-mask > div.login-desktop-cn > div.login-desktop-cn__card:nth-of-type(2) > div.login-desktop-cn__main > div.login-desktop-cn__footer:nth-of-type(2) > p.login-footer",
+      "textLen": 28,
+      "className": "login-footer",
+      "preview": "中国大陆以外请访问 kimi.ai， 遇到问题？ 去反馈"
+    }
+  ],
+  "anchorShapes": [
+    {
+      "href": "https://beian.miit.gov.cn/#/Integrated/recordQuery",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "京ICP备2023011302号-14",
+          "path": "div.legal-footer.legal-footer--default < div.home-landing-tail",
+          "parentTextLen": 89,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://tsm.miit.gov.cn/dxxzsp/xkz/xkzgl/resource/qiyesearch.jsp?num=%25E4%25BA%25ACB2-20240852&type",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "京B2-20240852",
+          "path": "div.legal-footer.legal-footer--default < div.home-landing-tail",
+          "parentTextLen": 89,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802043150",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "京公网安备11010802043150号",
+          "path": "div.legal-footer.legal-footer--default < div.home-landing-tail",
+          "parentTextLen": 89,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    },
+    {
+      "href": "https://www.kimi.ai/",
+      "occurrences": 1,
+      "shapes": [
+        {
+          "anchorText": "kimi.ai",
+          "path": "p.login-footer < div.login-desktop-cn__footer",
+          "parentTextLen": 28,
+          "title": "",
+          "ariaLabel": ""
+        }
+      ]
+    }
+  ]
+}
