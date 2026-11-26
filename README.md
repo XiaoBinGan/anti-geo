@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Manifest V3](https://img.shields.io/badge/Manifest-V3-blue.svg)](manifest.json)
 [![No dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](package.json)
-[![Tests](https://img.shields.io/badge/tests-119%20passing-brightgreen.svg)](test/)
+[![Tests](https://img.shields.io/badge/tests-137%20passing-brightgreen.svg)](test/)
 
 一个免费、纯本地的浏览器扩展。在你用 ChatGPT / Perplexity / Google AI 概览 / 豆包 / Kimi / 元宝 / 秘塔 / DeepSeek 的时候，把答案里**每条引用的底细**摊开：这条链接背后的站点，是正经来源，还是被 GEO 投毒的内容农场。
 
@@ -199,6 +199,26 @@ mitmdump -s tools/antigeo_addon.py -p 8080
 
 > 为什么不把整个产品做成代理？见 [docs/architecture.md](docs/architecture.md)。核心原因：
 > ① 根证书是劝退级门槛 ② App 的 cert pinning 挡死 ③ 展示必须回到 UI 层，所以代理只能当取数器。
+
+---
+
+## 使用记录（诊断闭环）
+
+插件跑在你机器上，我怎么知道它在你那儿表现如何？
+
+设置页 →「使用记录」会按站点列出：
+
+| 站点 | 适配器 | 次数 | 最多引用 | 最高污染度 | 状态 |
+|---|---|---|---|---|---|
+| chatglm.cn | 智谱清言 | 12 | 40 | 83 | 检出投毒 |
+| perplexity.ai | Perplexity | 9 | 6 | 12 | 正常 |
+| some-new-site.com | - | 3 | 0 | 0 | 未找到引用 |
+
+**「未找到引用」就是在告诉你：这个平台的适配失效了。** 导出诊断包发给维护者，能直接对着数据改。
+
+![使用记录](docs/screenshots/05-usage-log.png)
+
+隐私：只存主机名，不存 URL、不存正文、不存输入。可关闭、可清空，只有你主动导出才生成文件。
 
 ---
 

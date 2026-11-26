@@ -91,6 +91,20 @@
   .override-list .o code { background: #f3f4f6; padding: 1px 6px; border-radius: 4px; font-size: 11.5px; flex: 1;
                            word-break: break-all; }
   .override-list .o button { padding: 3px 9px; font-size: 11.5px; }
+
+  .utable { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 12.5px; }
+  .utable th { text-align: left; color: #9ca3af; font-weight: 500; font-size: 11.5px;
+               padding: 6px 8px; border-bottom: 1px solid #eceff3; white-space: nowrap; }
+  .utable td { padding: 7px 8px; border-bottom: 1px solid #f4f5f7; vertical-align: middle; }
+  .utable tr:last-child td { border-bottom: 0; }
+  .utable .host { font-weight: 600; }
+  .tagbad { font-size: 10.5px; padding: 1px 6px; border-radius: 4px; white-space: nowrap; }
+  .tagbad.warn { background: #fef3c7; color: #92400e; }
+  .tagbad.err  { background: #fee2e2; color: #991b1b; }
+  .tagbad.ok   { background: #dcfce7; color: #166534; }
+  .tagbad.mute { background: #f3f4f6; color: #6b7280; }
+  .ustat { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 12px; font-size: 12.5px; color: #4b5563; }
+  .ustat b { color: #111827; font-size: 15px; }
 </style>
 </head>
 <body>
@@ -179,6 +193,29 @@
       <input type="file" id="importFile" accept="application/json,.json" style="display:none" />
     </div>
     <div class="status idle" id="listStatus" style="display:none"></div>
+  </section>
+
+  <!-- ─────────── 使用记录 ─────────── -->
+  <section>
+    <h2>使用记录 <span class="c-badge" style="font-size:10.5px;padding:1px 6px;border-radius:4px;background:#eef2ff;color:#4338ca">只存本机</span></h2>
+    <p class="desc">
+      记录插件在各个站点的表现：找到了几个引用、容器选对没有、有没有失效。
+      <b>不联网、不上传</b>，只写本机存储。导出后可以发给维护者定位问题。
+    </p>
+
+    <div class="row">
+      <span class="lb">启用记录<small>关掉后不再写入新记录，已有记录保留</small></span>
+      <div class="toggle"><input type="checkbox" id="usageLog" /><span class="slider"></span></div>
+    </div>
+
+    <div class="btnrow">
+      <button id="usageRefresh">刷新统计</button>
+      <button class="primary" id="usageExport">导出诊断包</button>
+      <button class="ghost" id="usageClear">清空记录</button>
+    </div>
+
+    <div class="status idle" id="usageStatus">点「刷新统计」查看</div>
+    <div id="usageBody"></div>
   </section>
 
   <!-- ─────────── 外部数据源 ─────────── -->

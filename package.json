@@ -1,12 +1,12 @@
 {
   "name": "anti-geo",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "private": true,
   "type": "module",
   "description": "检测 AI 搜索答案里的 GEO 投毒：站群模板、隐藏指令注入、伪装摘要。纯本地运行的浏览器扩展。",
   "scripts": {
     "test": "npm run test:all",
-    "test:unit": "node test/scoring.test.mjs && node test/community.test.mjs && node test/snippet.test.mjs && node test/real-snapshot.test.mjs && node test/e2e-subscribe.mjs && node test/external-source.test.mjs",
+    "test:unit": "node test/scoring.test.mjs && node test/community.test.mjs && node test/snippet.test.mjs && node test/usage.test.mjs && node test/real-snapshot.test.mjs && node test/e2e-subscribe.mjs && node test/external-source.test.mjs",
     "test:browser": "node test/browser-e2e.mjs",
     "test:all": "npm run test:unit && npm run test:browser",
     "test:probe": "node test/probe.mjs",

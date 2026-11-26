@@ -7,6 +7,7 @@ import { analyzePage } from './lib/analyze.js';
 import { scoreCitations, scoreAnswerText } from './lib/scoring.js';
 import { getSettings, cacheGet, cacheSet, DEFAULT_SETTINGS } from './lib/config.js';
 import { getSubscription, refreshSubscription, maybeAutoRefresh } from './lib/community.js';
+import { recordUsage } from './lib/usage.js';
 
 /* ───────────────────────── 消息路由 ───────────────────────── */
 
@@ -73,7 +74,9 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
 /* ───────────────────────── 主分析流 ───────────────────────── */
 
-async function handleAnalyze({ urls = [], sources = [], pageUrl = '', deep = true, answerText = '' }) {
+async function handleAnalyze({ urls = [], sources = [], pageUrl = '', deep = true, answerText = '', diag = null }) {
+  const t0 = Date.now();
+  const senderHost = diag?.host || '';
   const settings = await getSettings();
   if (!settings.enabled) return { skipped: true, reason: 'disabled' };
 
@@ -85,6 +88,13 @@ async function handleAnalyze({ urls = [], sources = [], pageUrl = '', deep = tru
       return { skipped: true, reason: 'no-citations-and-no-text' };
     }
     const t = scoreAnswerText(answerText);
+    await logUsage(settings, {
+      host: safeHost(pageUrl) || senderHost || 'unknown',
+      platform: diag?.platform || '', mode: 'text-only',
+      cites: 0, distinct: 0, flagged: t.flags.filter((f) => f.t !== 'info').length,
+      red: t.level.key === 'red' ? 1 : 0, pollution: t.pollution,
+      containerCls: '', fallback: true, deepChecked: 0, ms: 0,
+    });
     return {
       mode: 'text-only',
       textOnly: t,
@@ -188,6 +198,23 @@ async function handleAnalyze({ urls = [], sources = [], pageUrl = '', deep = tru
     snippets: snippetMap,
   });
 
+  await logUsage(settings, {
+    host: safeHost(pageUrl) || 'unknown',
+    platform: '',
+    mode: 'citations',
+    cites: scored.summary.total,
+    distinct: scored.summary.distinctDomains,
+    flagged: scored.summary.flagged,
+    red: scored.summary.red,
+    pollution: scored.summary.pollution,
+    containerCls: diag?.containerCls || '',
+    fallback: !!diag?.fallback,
+    overrideHit: !!diag?.overrideHit,
+    platform: diag?.platform || '',
+    deepChecked: target.length,
+    ms: Date.now() - t0,
+  });
+
   return {
     ...scored,
     pageUrl,
@@ -222,6 +249,17 @@ async function fetchExternalSources(settings) {
   } finally {
     clearTimeout(timer);
   }
+}
+
+/**
+ * 记录一条使用诊断（本地，不联网）。
+ * 任何字段缺失都不影响检测 —— 记录失败静默吞掉。
+ */
+async function logUsage(settings, rec) {
+  if (settings?.usageLog === false) return;
+  try {
+    await recordUsage({ ts: Date.now(), ...rec });
+  } catch {}
 }
 
 function safeHost(url) {

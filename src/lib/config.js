@@ -25,6 +25,8 @@ export const DEFAULT_SETTINGS = {
   /** 外部数据源：本地 mitmproxy 取数服务（能拿到 rag snippet，比 DOM 准） */
   externalSource: false,
   externalSourceUrl: 'http://127.0.0.1:8765/recent',
+  /** 本地使用记录：只存本机，可关闭、清空、导出 */
+  usageLog: true,
 };
 
 export async function getSettings() {

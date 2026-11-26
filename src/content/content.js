@@ -1008,6 +1008,9 @@
     return sendMessage({ type: 'AG_GET_SETTINGS' }).then((r) => r || {});
   }
 
+  /** 本次扫描的容器诊断，随分析一起上报（只存本地） */
+  let scanDiag = { host: HOSTNAME, platform: '', containerCls: '', fallback: false, overrideHit: false };
+
   async function doAnalyze(cites, deep, answerText = '') {
     return sendMessage({
       type: 'AG_ANALYZE',
@@ -1016,6 +1019,7 @@
       pageUrl: location.href,
       deep,
       answerText,
+      diag: scanDiag,
     });
   }
 
@@ -1038,6 +1042,13 @@
     const overrideSel = overrides[HOSTNAME] || overrides[location.hostname] || '';
 
     let roots = findAnswerRoots(overrideSel);
+    scanDiag = {
+      host: HOSTNAME,
+      platform: ADAPTER?.name || '',
+      containerCls: '',
+      fallback: false,
+      overrideHit: !!overrideSel,
+    };
     if (!roots.length) {
       // 没有外链 → findAnswerRoots 全部过滤掉了。退一步找最大正文块，
       // 让纯文本模式仍然能工作（元宝 / 豆包未检索时就是这种情况）
@@ -1055,6 +1066,11 @@
       ui?.bar?.remove();
       return;
     }
+
+    try {
+      const r0 = roots[roots.length - 1];
+      scanDiag.containerCls = (typeof r0.className === 'string' ? r0.className : '').slice(0, 60);
+    } catch {}
 
     const cites = collectCitations(roots);
     citationIndex = new Map(cites.map((c) => [c.url, c]));

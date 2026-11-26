@@ -1,5 +1,6 @@
 import { getSettings, saveSettings } from '../lib/config.js';
 import { buildExport, normalizeList, isSafeDomain } from '../lib/community.js';
+import { getUsage, clearUsage, summarize, buildExport as buildUsageExport } from '../lib/usage.js';
 
 const $ = (s) => document.querySelector(s);
 
@@ -52,8 +53,10 @@ async function load() {
   $('#subUrl').value = s.subscriptionUrl || '';
   $('#externalSource').checked = s.externalSource === true;
   $('#externalSourceUrl').value = s.externalSourceUrl || 'http://127.0.0.1:8765/recent';
+  $('#usageLog').checked = s.usageLog !== false;
 
   wireBasic();
+  wireUsage();
   wireExternal();
   wireSubscription();
   wireList();
@@ -106,6 +109,114 @@ function wireBasic() {
     });
   };
   bindList('#extraSites', 'extraSites');
+}
+
+/* ══════════════════════════ 使用记录 ══════════════════════════ */
+
+function fmtTs(ts) {
+  if (!ts) return '-';
+  const d = new Date(ts);
+  const diff = Date.now() - ts;
+  const min = Math.floor(diff / 60000);
+  if (min < 1) return '刚刚';
+  if (min < 60) return `${min} 分钟前`;
+  if (min < 1440) return `${Math.floor(min / 60)} 小时前`;
+  return d.toLocaleDateString('zh-CN');
+}
+
+function renderUsage(records) {
+  const st = $('#usageStatus');
+  const body = $('#usageBody');
+  const sum = summarize(records);
+
+  if (!sum.total) {
+    st.className = 'status idle';
+    st.innerHTML = '还没有记录。装上插件后在任意 AI 平台问几个问题，回来点「刷新统计」。';
+    body.innerHTML = '';
+    return;
+  }
+
+  st.className = 'status ok';
+  st.innerHTML =
+    `共 <b>${sum.total}</b> 次分析，覆盖 <b>${Object.keys(sum.byHost).length}</b> 个站点` +
+    `　·　红 ${sum.pollutionBuckets.red} / 黄 ${sum.pollutionBuckets.yellow} / 绿 ${sum.pollutionBuckets.green}`;
+
+  const rows = Object.values(sum.byHost)
+    .sort((a, b) => b.runs - a.runs)
+    .map((b) => {
+      const tags = [];
+      if (b.cites === 0 && b.containerMissing >= 1) tags.push('<span class="tagbad err">未找到引用</span>');
+      if (b.fallback) tags.push('<span class="tagbad warn">走兜底</span>');
+      if (b.textOnly) tags.push('<span class="tagbad mute">纯文本</span>');
+      if (b.maxPollution >= 55) tags.push('<span class="tagbad warn">检出投毒</span>');
+      if (!tags.length) tags.push('<span class="tagbad ok">正常</span>');
+      return `<tr>
+        <td class="host">${esc(b.host)}</td>
+        <td>${esc(b.platform || '-')}</td>
+        <td>${b.runs}</td>
+        <td>${b.cites}</td>
+        <td>${b.maxPollution}</td>
+        <td>${tags.join(' ')}</td>
+        <td style="color:#9ca3af">${fmtTs(b.lastTs)}</td>
+      </tr>`;
+    })
+    .join('');
+
+  body.innerHTML = `
+    <table class="utable">
+      <thead><tr>
+        <th>站点</th><th>适配器</th><th>次数</th><th>最多引用</th><th>最高污染度</th><th>状态</th><th>最近</th>
+      </tr></thead>
+      <tbody>${rows}</tbody>
+    </table>
+    ${sum.failures.length ? `<div class="status err" style="margin-top:12px">
+      <b>这些站点没找到引用，可能适配失效：</b><br/>
+      ${sum.failures.map((f) => `· ${esc(f.host)}（${f.runs} 次）`).join('<br/>')}
+    </div>` : ''}
+  `;
+}
+
+async function refreshUsage() {
+  const st = $('#usageStatus');
+  st.className = 'status idle';
+  st.textContent = '读取中…';
+  const records = await getUsage();
+  renderUsage(records);
+}
+
+function wireUsage() {
+  $('#usageLog').addEventListener('change', async (e) => {
+    await saveSettings({ usageLog: e.target.checked });
+    flashSaved(e.target.checked ? '已开启记录' : '已关闭记录');
+  });
+
+  $('#usageRefresh').addEventListener('click', refreshUsage);
+
+  $('#usageExport').addEventListener('click', async () => {
+    const records = await getUsage();
+    if (!records.length) {
+      flashSaved('还没有记录可导出');
+      return;
+    }
+    const s = await getSettings();
+    const data = buildUsageExport(records, { version: chrome.runtime.getManifest().version });
+    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = `anti-geo-usage-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    flashSaved(`已导出 ${data.summary.totalRuns} 次记录`);
+  });
+
+  $('#usageClear').addEventListener('click', async () => {
+    await clearUsage();
+    await refreshUsage();
+    flashSaved('已清空');
+  });
+
+  // 进设置页自动读一次
+  refreshUsage();
 }
 
 /* ══════════════════════════ 外部数据源 ══════════════════════════ */

@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "反GEO · AI 答案溯源",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "description": "检测 AI 搜索答案里的 GEO 投毒：站群模板、隐藏指令注入、伪装摘要。纯本地运行，不上传任何数据。",
   "default_locale": "zh_CN",
   "permissions": [
